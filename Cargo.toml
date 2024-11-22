@@ -2,5 +2,11 @@
 name = "nap"
 version = "0.0.1"
 edition = "2021"
+authors = ["Evantaur"]
+description = "Suspend-aware alternative to sleep for shell scripts etc."
+homepage = "https://github.com/evantaur/nap"
+licence = "GPL-2.0-or-later"
+
+
 
 [dependencies]
