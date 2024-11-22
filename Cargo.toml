@@ -1,6 +1,6 @@
 [package]
 name = "nap"
-version = "0.0.2"
+version = "0.0.3"
 edition = "2021"
 authors = ["Evantaur"]
 description = "Suspend-aware alternative to sleep for shell scripts etc."
@@ -16,8 +16,8 @@ strip = true
 opt-level = "z"
 codegen-units = 1
 panic = "abort"
+lto = true
 
 # The profile that 'dist' will build with
 [profile.dist]
 inherits = "release"
-lto = "thin"
