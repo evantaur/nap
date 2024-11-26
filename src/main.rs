@@ -106,9 +106,7 @@ fn main() {
         eprintln!("Error: Missing required arguments");
         std::process::exit(1);
     });
-    if sleep {
-        println!("sleep");
-    }
+
     let target = process_time(number.unwrap_or(0), at_times.clone(), has_midnight);
     loop {
         if current_time() >= target {
