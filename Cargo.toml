@@ -2,7 +2,7 @@
 name = "nap"
 version = "0.0.3"
 edition = "2021"
-authors = ["Evantaur"]
+authors = ['Evantaur <github@spectralwolf.eu>']
 description = "Suspend-aware alternative to sleep for shell scripts etc."
 homepage = "https://github.com/evantaur/nap"
 license = "GPL-2.0-or-later"
@@ -10,6 +10,8 @@ repository = "https://github.com/evantaur/nap"
 
 
 [dependencies]
+chrono = "0.4.38"
+clap = { version = "4.5.21", features = ["cargo", "derive"] }
 
 [profile.release]
 strip = true
