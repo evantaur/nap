@@ -108,11 +108,14 @@ fn main() {
     });
 
     let target = process_time(number.unwrap_or(0), at_times.clone(), has_midnight);
-    loop {
-        if current_time() >= target {
-            break;
-        }
-        let remaining_time = target - current_time();
+
+    while current_time() <= target {
+        let remaining_time = if target > current_time() {
+            target - current_time()
+        } else {
+            std::process::exit(0);
+        };
+
         let interval: u64;
         if sleep {
             interval = remaining_time;
